@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CheckAuthProvider } from './context/Context';
+import { UserProfileProvider } from './context/Context';
 import Tabs from './component/Tabs/Tabs';
 import ListNews from './component/ListNews/ListNews';
 import Profile from './component/Profile/Profile';
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <CheckAuthProvider>
+      <UserProfileProvider>
         <h1>
             Top Header news
           </h1>
@@ -24,7 +24,7 @@ function App() {
             <Profile />
           </div>
         </Tabs>
-      </CheckAuthProvider>
+      </UserProfileProvider>
     </div>
   );
 }

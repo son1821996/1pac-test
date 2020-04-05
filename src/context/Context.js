@@ -6,14 +6,14 @@ if (localStorage.getItem('user_profile') !== '') {
   userProfile = JSON.parse(localStorage.getItem('user_profile'));
 };
 
-const CheckAuthContext = React.createContext(userProfile);
+const UserProfileContext = React.createContext(userProfile);
 
-const CheckAuthProvider = (props) => {
+const UserProfileProvider = (props) => {
   return (
-    <CheckAuthContext.Provider value={userProfile}>
+    <UserProfileContext.Provider value={userProfile}>
       {props.children}
-    </CheckAuthContext.Provider>
+    </UserProfileContext.Provider>
   )
 };
 
-export { CheckAuthContext, CheckAuthProvider };
+export { UserProfileContext, UserProfileProvider };

@@ -17,7 +17,7 @@ const NewsDetail = () => {
         </div>
         <div>
           Original Link:&nbsp;
-          <a href={newsDetail.url} target="_blank">
+          <a href={newsDetail.url} target="_blank" rel="noopener noreferrer">
             {newsDetail.url}
           </a>
         </div>

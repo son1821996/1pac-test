@@ -9,7 +9,6 @@ import './Tabs.scss';
 
 const Tabs = ({ children }) => {
   const currentTab = localStorage.getItem('active_tab');
-  console.log('currentTab', currentTab);
 
   const [activeTab, setActiveTab] = useState((currentTab === '' || currentTab === null) ? children[0].props.label : currentTab);
 
@@ -17,7 +16,6 @@ const Tabs = ({ children }) => {
     setActiveTab(tab);
   }
 
-  console.log('activeTab', activeTab);
 
   return (
     <div className="tabs">

@@ -22,14 +22,13 @@ const RegisterForm = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    const { username, password, interested, address } = userInput;
+    const { username, interested, address } = userInput;
     localStorage.setItem('user_profile', JSON.stringify({
       username,
-      password,
       address,
       interested
     }));
-    alert('Register success full');
+    alert('Register successfully');
     window.location.reload();
   }
 
